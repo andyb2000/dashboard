@@ -264,7 +264,7 @@ function draw_gauge(ctx,x,y,width,height,position,maxvalue,units,type, offset, g
   else if (val>=10)
      val = val.toFixed(1);
   else if (val<=-100)
-     val = val.toFixed(0);
+     val = val.toFixed(1);
   else if (val<=-10)
      val = val.toFixed(1);
   else

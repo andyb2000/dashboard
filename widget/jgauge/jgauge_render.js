@@ -90,14 +90,16 @@ function draw_jgauge(ctx,x,y,width,height,value,max,min,units)
   if (size>170) size=170;
   if (size<120) size=120;
 
-  decimalPlaces = 0;
+  decimalPlaces = 1;
   if (max > min) {
     if ((max - min) <= 1.2)  decimalPlaces = 2;
-    else if ((max - min) <= 12)  decimalPlaces = 1;
+    else if ((max - min) <= 12)  decimalPlaces = 2;
   } else {
     if ((min - max) <= 1.2)  decimalPlaces = 2;
-    else if ((min - max) <= 12)  decimalPlaces = 1;
+    else if ((min - max) <= 12)  decimalPlaces = 2;
   }
+
+decimalPlaces = 2;
   
   ctx.clearRect(0,0,width,height);
 
